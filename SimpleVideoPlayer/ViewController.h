@@ -7,9 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MediaPlayer/MediaPlayer.h>
+#import <MobileCoreServices/MobileCoreServices.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UIImagePickerControllerDelegate,
+                                              UINavigationControllerDelegate>
 
+@property (strong, nonatomic) MPMoviePlayerController *videoController;
+
+- (IBAction)captureVideo:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UIView *videoView;
 
 @end
 
